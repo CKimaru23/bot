@@ -12,16 +12,16 @@ const botTypeClasses = {
 function BotSpecs({ bot }) {
   return (
     <div className="ui segment">
-      <div className="ui two column centered grid">
-        <div className="row">
-          <div className="four wide column">
+      <div>
+        <div>
+          <div>
             <img
               alt="oh no!"
               className="ui medium circular image bordered"
               src={bot.avatar_url}
             />
           </div>
-          <div className="four wide column">
+          <div>
             <h2>Name: {bot.name}</h2>
             <p>
               <strong>Catchphrase: </strong>
@@ -32,18 +32,18 @@ function BotSpecs({ bot }) {
               <i className={botTypeClasses[bot.bot_class]} />
             </strong>
             <br />
-            <div className="ui segment">
-              <div className="ui three column centered grid">
-                <div className="row">
-                  <div className="column">
+            <div>
+              <div>
+                <div>
+                  <div>
                     <i className="icon large circular red heartbeat" />
                     <strong>{bot.health}</strong>
                   </div>
-                  <div className="column">
+                  <div>
                     <i className="icon large circular yellow lightning" />
                     <strong>{bot.damage}</strong>
                   </div>
-                  <div className="column">
+                  <div >
                     <i className="icon large circular blue shield" />
                     <strong>{bot.armor}</strong>
                   </div>

@@ -5,7 +5,8 @@ function BotCollection({ bots, enlistBot, deleteBot }) {
   
   const botItem = bots.map((bot) => {
     return (
-      <BotCard
+
+      <BotCard 
         key={bot.id}
         bot={bot}
         clickEvent={enlistBot}
@@ -14,8 +15,8 @@ function BotCollection({ bots, enlistBot, deleteBot }) {
     );
   });
   return (
-    <div className="ui four column grid">
-      <div className="row">
+    <div>
+      <div className="flex-container">
         {botItem}
       </div>
     </div>

@@ -1,15 +1,14 @@
 body {
-  margin: 0;
+  margin-left: 600px;
   padding: 0;
   font-family: sans-serif;
+  display:flex;
+  align-content: center;
 }
 
-.text-wrap {
-  word-wrap: break-word;
-}
 
 .bot-army {
-  overflow-x: scroll;
+  border: 1px solid;
   min-height: 300px;
   max-width: 100%;
 }
@@ -22,3 +21,68 @@ body {
 .ui.grid {
   padding: 0px 20px;
 }
+
+.card {
+  margin-bottom: 6rem;
+  background-color: rgb(247, 247, 247);
+  height: 100%;
+  flex-wrap: nowrap;
+ 
+}
+
+.cardClass {
+
+  max-width: 100%;
+  height: 400px;
+  border-top: 20px;
+  margin-top: 50px;
+  
+}
+
+.card-image{
+  width:  100px;
+  height: 150px;
+  object-fit: cover;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-title {
+  font-weight: 900;
+  text-align: center;
+}
+
+.card-text-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.card-description {
+  font-size: 13px;
+  overflow: hidden;
+  height: 100px;
+}
+
+.card-body {
+  font-weight: 400;
+  border: 1px solid;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+
+.btn .btn-primary {
+  text-align: center!important;
+}
+.btn-primary {
+  color: black;
+  background-color: goldenrod;
+  border-color: black;
+}
+.btn-primary:hover {
+  color: black;
+  background-color: goldenrod;
+  border-color: black;
+}
+
+

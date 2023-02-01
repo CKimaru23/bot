@@ -1,4 +1,6 @@
 import React from "react";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 const botTypeClasses = {
   Assault: "icon military",
@@ -11,51 +13,38 @@ const botTypeClasses = {
 
 function BotCard({ bot, clickEvent, deleteBot }) {
   return (
-    <div className="ui column">
-      <div className="ui card" key={bot.id} onClick={() => clickEvent(bot)}>
-        <div className="image">
-          <img alt="oh no!" src={bot.avatar_url} />
-        </div>
-        <div className="content">
-          <div className="header">
-            {bot.name}
-            <i className={botTypeClasses[bot.bot_class]} />
+    // <div style={{display:'flex', flexDirection:'column', border: '1px solid', borderColor:'blue', maxWidth:'40%'}}>
+    
+      <Card>
+        <Card.Body>
+          <div style={{textAlign: 'center'}}>
+            <Card.Img  className="card-image" variant="top" src={bot.avatar_url} onClick={() => clickEvent(bot)}/>
           </div>
-          <div className="meta text-wrap">
-            <small>{bot.catchphrase}</small>
-          </div>
-        </div>
-        <div className="extra content">
-          <span>
-            <i className="icon heartbeat" />
-            {bot.health}
-          </span>
-
-          <span>
-            <i className="icon lightning" />
-            {bot.damage}
-          </span>
-          <span>
-            <i className="icon shield" />
-            {bot.armor}
-          </span>
-          <span>
-            <div className="ui center aligned segment basic">
-              <button
-                className="ui mini red button"
-                onClick={(event) => {
+        
+        
+          <div className="card-text-body">
+            <Card.Text className="card-title">{bot.id}</Card.Text>
+            <Card.Title className="card-title">{bot.name}</Card.Title>
+            <Card.Text className="card-title">{botTypeClasses[bot.bot_class]} </Card.Text>
+            <Card.Text className="card-title">{bot.health}</Card.Text>
+            <Card.Text className="card-title">{bot.damage}</Card.Text>
+            <Card.Text className="card-title">{bot.armor}</Card.Text>
+            <Card.Text className="card-title">{bot.catchphrase}</Card.Text>
+            <Button className="card-title" onClick={(event) => {
                   event.stopPropagation();
                   deleteBot(bot);
-                }}
-              >
-                x
-              </button>
-            </div>
-          </span>
-        </div>
-      </div>
-    </div>
+                  }}
+              style={{fontSize:'2rem', fontWeight:'0.5rem'}}
+            > 
+              Click here to delete the above bot
+            </Button>
+           
+          </div>
+        </Card.Body>
+      </Card>
+    
   );
 }
 
 export default BotCard;
+

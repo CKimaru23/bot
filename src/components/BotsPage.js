@@ -35,7 +35,7 @@ function BotsPage() {
         removeBot={removeBot}
         deleteBot={deleteBot}
       />
-      <BotCollection bots={bots} enlistBot={enlistBot} deleteBot={deleteBot} />
+      <BotCollection bots={bots} enlistBot={enlistBot} deleteBot={deleteBot}/>
     </div>
   );
 }
